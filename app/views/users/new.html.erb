@@ -1,0 +1,8 @@
+<%= form_for :user, url: '/users' do |f| %>
+<h1>Регистрация</h1>
+    <input type="text" name="user[name]" placeholder="Имя пользователя"/> </br>
+    <input type="text" name="user[email]"placeholder="e-mail"/> </br>
+    <input type="password" name="user[password]" placeholder="Пароль" /> </br>
+    <input type="password" name="user[password_confirmation]" placeholder="Подтверждение пароля"/> </br>
+    <input type="submit" name="commit" value="Зарегистрироваться"/>
+<% end %>

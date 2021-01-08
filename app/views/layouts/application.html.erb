@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab12</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav>
+    <h1>
+    <% if is_authenticate %>
+        Вы вошли как <%= @current_user.name %> <%= link_to "Выйти", '/logout' %>
+    <% else %>
+        <%= link_to 'Войти', '/login' %>
+        <%= link_to 'Регистрация', '/signup' %>
+    <% end %>
+    </h1>
+   </nav>
+      
+    <%= yield %>
+  </body>
+</html>
